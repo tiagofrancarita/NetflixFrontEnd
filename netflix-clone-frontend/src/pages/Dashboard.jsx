@@ -25,7 +25,7 @@ const Dashboard = () => {
       <p className="text-lg text-zinc-300 mb-8">Bem-vindo ao painel de administração</p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Card 1 */}
+        {/* Card 1: Filmes e Séries */}
         <div className="bg-zinc-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
           <h2 className="text-xl font-semibold mb-2">Filmes e Séries</h2>
           <p className="text-zinc-400">Gerencie seu catálogo completo de mídia.</p>
@@ -37,7 +37,7 @@ const Dashboard = () => {
           </button>
         </div>
 
-        {/* Card 2 */}
+        {/* Card 2: Categorias */}
         <div className="bg-zinc-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
           <h2 className="text-xl font-semibold mb-2">Categorias</h2>
           <p className="text-zinc-400">Edite e organize suas categorias.</p>
@@ -49,16 +49,24 @@ const Dashboard = () => {
           </button>
         </div>
 
-        {/* Card 3 */}
+        {/* Card 3: Usuários */}
         <div className="bg-zinc-800 rounded-xl shadow-md p-6 hover:shadow-lg transition">
           <h2 className="text-xl font-semibold mb-2">Usuários</h2>
           <p className="text-zinc-400">Controle o acesso de administradores.</p>
-          <button
-            onClick={() => navigate("/usuarios")}
-            className="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 rounded"
-          >
-            Acessar
-          </button>
+          <div className="flex flex-col gap-2 mt-4">
+            <button
+              onClick={() => navigate("/usuarios")}
+              className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded"
+            >
+              Gerenciar usuários
+            </button>
+            <button
+              onClick={() => navigate("/usuarios/cadastrar")}
+              className="px-4 py-2 bg-green-600 hover:bg-green-700 rounded"
+            >
+              Cadastrar Novo
+            </button>
+          </div>
         </div>
       </div>
 
